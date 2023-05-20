@@ -39,7 +39,7 @@
         <a class="navbar-item"> Publications </a>
         <a class="navbar-item"> My Academic Life</a>
         <a class="navbar-item"> Resources</a>
-        <a class="navbar-item"> Musing of East Asian Buddhism</a>
+        <a class="navbar-item"> Musings on East Asian Buddhism</a>
         <a class="navbar-item"> Contact</a>
 
         <!-- <div class="navbar-item has-dropdown is-hoverable">
