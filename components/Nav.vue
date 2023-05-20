@@ -1,97 +1,83 @@
-<template>
-  <nav
-    class="navbar is-shadowless"
-    role="navigation"
-    aria-label="main navigation"
-  >
-    <div class="navbar-brand is-hidden-desktop">
-      <!-- <a class="navbar-item" href="https://bulma.io">
-          <img
-            src="https://bulma.io/images/bulma-logo.png"
-            width="112"
-            height="28"
-          />
-        </a> -->
-      <div class="navbar-item">
-        <div class="buttons">
-          <a class="button">
-            <strong>Contact Me</strong>
-          </a>
-        </div>
-      </div>
-      <a
-        role="button"
-        class="navbar-burger"
-        aria-label="menu"
-        aria-expanded="false"
-        data-target="navbarBasicExample"
-      >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div>
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start navbar-center">
-        <a class="navbar-item"> Home </a>
-        <a class="navbar-item"> CV </a>
-        <a class="navbar-item"> Publications </a>
-        <a class="navbar-item"> My Academic Life</a>
-        <a class="navbar-item"> Resources</a>
-        <a class="navbar-item"> Musings on East Asian Buddhism</a>
-        <a class="navbar-item"> Contact</a>
-
-        <!-- <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link"> More </a>
-
-          <div class="navbar-dropdown">
-            <a class="navbar-item"> About </a>
-            <a class="navbar-item"> Jobs </a>
-            <a class="navbar-item"> Contact </a>
-            <hr class="navbar-divider" />
-            <a class="navbar-item"> Report an issue </a>
-          </div>
-        </div> -->
-      </div>
-
-      <!-- <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-primary">
-              <strong>Sign up</strong>
+<template lang="html">
+  <nav class="navbar navbar-expand-lg mt-3 mb-3">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#basicExampleNav"
+      aria-controls="basicExampleNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+      <ul class="navbar-nav w-100 justify-content-between" >
+        <li :class="isActive(`/home`)">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li :class="isActive(`/cv`)">
+          <a class="nav-link" href="/">CV</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarDropdownMenuLink"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Publications</a
+          >
+          <div
+            class="dropdown-menu dropdown-primary"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <a class="dropdown-item" href="/popular-writings">
+              Popular Writings
             </a>
-            <a class="button is-light"> Log in </a>
+            <a class="dropdown-item" href="/academic-work">
+              Academic Work
+            </a>
           </div>
-        </div>
-      </div> -->
+        </li>
+        <li :class="isActive(`/blogs/`)">
+          <a class="nav-link" href="/my-academic-life">My Academic Life</a>
+        </li>
+        <li :class="isActive(`/alumni`)">
+          <a class="nav-link" href="/resources">Resources</a>
+        </li>
+        <li :class="isActive(`/faqs`)">
+          <a class="nav-link" href="/musings-on-east-asian-buddhism">Musings on East Asian Buddhism</a>
+        </li>
+        <li :class="isActive(`/about`)">
+          <a class="nav-link" href="/contactme">Contact Me</a>
+        </li>
+      </ul>
     </div>
   </nav>
 </template>
 
 <script>
 export default {
-
-  mounted() {
-    const $ = window.$;
-    $(".navbar-burger").click(function () {
-      $(".navbar-burger").toggleClass("is-active");
-      $(".navbar-menu").toggleClass("is-active");
-
-    });
+  name: 'Navigation',
+  data() {
+    return { cddLogo: "" };
   },
   methods: {
-
-  }
+    isActive: function (route) {
+      return route == this.$route.path ? 'nav-item active' : 'nav-item';
+    },
+  },
 }
-
 </script>
-<style>
-@media only screen and (min-width: 760px) {
-  .navbar-center {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
+
+<style scoped>
+ul li a {
+  color: teal !important;
+  font-weight: 400;
+}
+.navbar {
+  box-shadow: none;
 }
 </style>

@@ -2,7 +2,7 @@
   <div>
     <Header />
     <Nav class="container" />
-    <Body class="container" />
+    <Body />
     <Footer />
   </div>
 </template>
