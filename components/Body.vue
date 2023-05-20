@@ -4,7 +4,7 @@
       <div class="columns">
         <div class="column is-one-third">
           <figure class="image is9by16">
-            <img src="../assets/profile.jpeg" />
+            <!-- <img src="../assets/profile.jpeg" /> -->
           </figure>
         </div>
         <div class="column">
@@ -36,12 +36,12 @@
     </section>
 
     <hr />
-    <div class="has-text-centered is-size-3">Reaserch Interests</div>
+    <div class="has-text-centered is-size-3">Recent Work</div>
     <section class="section">
       <div class="columns">
         <div class="column is-one-third">
           <figure class="image is9by16">
-            <img src="../assets/short-hair.jpeg" />
+            <!-- <img src="../assets/short-hair.jpeg" /> -->
           </figure>
         </div>
         <div class="column">
