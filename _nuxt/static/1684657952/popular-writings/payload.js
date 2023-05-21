@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/popular-writings", {data:[{}],fetch:{},mutations:[]});

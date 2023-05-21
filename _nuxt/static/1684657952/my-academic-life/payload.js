@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/my-academic-life", {data:[{}],fetch:{},mutations:[]});
