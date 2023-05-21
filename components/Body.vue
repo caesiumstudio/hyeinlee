@@ -8,7 +8,7 @@
             <p class="text-muted small">© Marcus Reichmann</p>
           </div>
           <div class="col-md-8">
-            <p class="has-text-justified">
+            <p class="text-justify">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -21,7 +21,7 @@
               Lorem Ipsum.
             </p>
             <br />
-            <p class="has-text-justified">
+            <p class="text-justify">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -40,43 +40,30 @@
 
     <div class="h2 text-center mt-5 mb-3">Recent Work</div>
     <hr />
-    <div class="">
-      <div class="container light-pink">
-        <div class="row p-3">
-          <div class="col-md-4">
-            <img
-              src="../assets/contemporary-buddhism.png"
-              class="img-fluid shadow-strong"
-            />
-          </div>
-          <div class="col-md-8 border-left text-center">
-            <a href="#">
-              <img
-                src="../assets/pdf-page.png"
-                class="img-fluid pl-4 pr-4 shadow-strong"
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Publication :item="items[0]" />
   </div>
 </template>
 
 <script>
 export default {
   name: 'NuxtTutorial',
+  data: () => {
+    return {
+      items: []
+    };
+  },
+  created() {
+    this._data.items = this.$store.state.academicWork.items;
+  },
 }
 </script>
 <style scoped>
-.light-teal {
-  background-color: #e5f9f7;
-}
-.light-pink {
-  /* background-color: #f9f2e5; */
-}
 .shadow-strong {
   box-shadow: 0px 6px 20px 0px #d7d7d7;
+}
+.img-wrapper {
+  height: 500px;
+  overflow: hidden;
 }
 </style>
 

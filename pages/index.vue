@@ -1,10 +1,5 @@
 <template>
-  <div>
-    <Header />
-    <Nav class="container" />
-    <Body />
-    <Footer />
-  </div>
+  <Body />
 </template>
 
 <script>
