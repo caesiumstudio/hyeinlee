@@ -1,17 +1,17 @@
 <template>
   <div>
     <div v-for="item in this.items" :key="item.cover">
-      <Publication :item="item" />
+      <AcademicArticle :item="item" />
     </div>
   </div>
 </template>
 
   <script>
-import Publication from './Publication.vue';
+import AcademicArticle from './AcademicArticle.vue';
 
 export default {
   name: "NuxtTutorial",
-  components: { Publication },
+  components: { AcademicArticle },
   data: () => {
     return {
       items: []

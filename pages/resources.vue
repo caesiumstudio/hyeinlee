@@ -1,5 +1,5 @@
 <template>
-  <h1>privaty policy</h1>
+  <h1 class="container">resources</h1>
 </template>
 
   <script>

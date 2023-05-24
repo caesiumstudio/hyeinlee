@@ -10,7 +10,8 @@
     "lint:prettier": "prettier --check .",
     "lint": "npm run lint:prettier",
     "lintfix": "prettier --write --list-different .",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "gitdeploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
+    "fbdeploy": "nuxt build && NODE_ENV=production && nuxt generate && firebase deploy --only hosting:deliver-the-post"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.6",

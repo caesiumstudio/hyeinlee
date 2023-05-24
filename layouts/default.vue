@@ -1,7 +1,7 @@
 <template>
   <div>
     <Header />
-    <Nav class="container" />
+    <Nav />
     <Nuxt />
     <Footer />
   </div>
@@ -73,8 +73,15 @@ html {
   border-left-color: teal;
 }
 
+.teal {
+  color: #013945 !important;
+}
+.bgcolor-white {
+  background-color: white;
+}
 .light-teal {
-  background-color: #e5f9f7;
+  /* background-color: #a3bcb6; */
+  background-color: #cae1db;
 }
 .light-pink {
   background-color: #f9f2e5;
@@ -82,5 +89,11 @@ html {
 .text-justify {
   text-align: justify;
   text-justify: inter-word;
+}
+.shadow-strong {
+  box-shadow: 0px 4px 12px 0px rgb(0 0 0 / 25%);
+}
+text-black {
+  color: black !important;
 }
 </style>

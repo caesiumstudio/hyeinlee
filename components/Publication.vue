@@ -1,22 +1,20 @@
 <template>
-  <div class="">
-    <div class="container">
-      <div class="row p-3">
-        <div class="col-md-4 mb-4">
-          <img :src="item.cover" class="img-fluid shadow-strong" />
+  <div class="mb-5">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <img :src="item.cover" class="img-fluid shadow-strong item-img" />
         </div>
-        <div class="col-md-8 text-center">
-          <a href="#">
-            <div class="img-wrapper">
-              <img
-                :src="item.pdf"
-                class="img-fluid pt-5 pb-5 pl-4 pr-4 shadow-strong"
-              />
-            </div>
-          </a>
+        <div class="col-md-6 text-center">
+          <div class="img-wrapper">
+            <a :href="'/academic-work/#' + item.id">
+              <img :src="item.pdf" class="img-fluid shadow-strong" />
+            </a>
+          </div>
         </div>
       </div>
     </div>
+    <hr class="hr hr-blurry" />
   </div>
 </template>
 
@@ -32,5 +30,8 @@ export default {
 .img-wrapper {
   height: 500px;
   overflow: hidden;
+}
+.item-img {
+  height: 500px;
 }
 </style>

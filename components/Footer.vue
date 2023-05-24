@@ -1,31 +1,32 @@
 <template lang="html">
-  <div class="light-teal pb-5 mt-5 pt-5">
-    <div class="container  text-center light-teal">
+  <div class="pb-5 mt-5 pt-5">
+    <!-- <hr class="hr hr-blurry" /> -->
+    <div class="container text-center">
       <!-- <hr/> -->
       <div class="row">
         <div class="col-12 col-md text-center">
           <div class="mb-2">
-            <small class="ml-1 text-muted">© 2020-2024</small>
+            <small class="ml-1 teal">© 2023 by Hyein Lee</small>
           </div>
-          <ul class="list-unstyled text-small">
+          <!-- <ul class="list-unstyled text-small">
             <li>
-              <a class="text-muted" rel="noreferrer" href="/privacy-policy"
+              <a class="teal" rel="noreferrer" href="/"
                 >Privacy Policy
               </a>
             </li>
             <li>
-              <a class="text-muted" rel="noreferrer" href="/impressum"
+              <a class="teal" rel="noreferrer" href="/"
                 >Impressum
               </a>
             </li>
-          </ul>
+          </ul> -->
         </div>
-        <div class="col-12 col-md text-center">
-          <h5>Social</h5>
+        <!-- <div class="col-12 col-md text-center">
+          <div class="teal">Social</div>
           <ul class="list-unstyled text-small">
             <li>
               <a
-                class="text-muted"
+                class="teal"
                 rel="noreferrer"
                 href="https://twitter.com/codingdeepdive"
                 target="_blank"
@@ -33,13 +34,13 @@
               </a>
             </li>
           </ul>
-        </div>
-        <div class="col-12 col-md text-center">
-          <h5>Contact</h5>
-          <ul class="list-unstyled text-small">
-            <li>
+        </div> -->
+        <!-- <div class="col-12 col-md text-center">
+          <div class="teal">Contact</div>
+          <ul class="list-unstyled text-small"> -->
+            <!-- <li>
               <a
-                class="text-muted"
+                class="teal"
                 rel="noreferrer"
                 href="https://www.linkedin.com/school/codingdeepdive"
                 target="_blank"
@@ -48,22 +49,22 @@
             </li>
             <li>
               <a
-                class="text-muted"
+                class="teal"
                 rel="noreferrer"
                 href="mailto:contact@hyeinlee.com"
                 >Email
               </a>
             </li>
           </ul>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: "Footer"
-};
+  name: 'Footer',
+}
 </script>
 
 <style lang="css" scoped>

@@ -1,9 +1,10 @@
 <template>
-  <PopularWritings />
+  <PopularWriting />
 </template>
 
 <script>
 export default {
   name: 'IndexPage',
 }
+
 </script>
