@@ -79,9 +79,12 @@ html {
 .bgcolor-white {
   background-color: white;
 }
+.bg-lightgray {
+  background-color: #f3f3f3;
+}
 .light-teal {
-  /* background-color: #a3bcb6; */
-  background-color: #cae1db;
+  background-color: #70c5b9;
+  /* background-color: #cae1db; */
 }
 .light-pink {
   background-color: #f9f2e5;
@@ -92,6 +95,9 @@ html {
 }
 .shadow-strong {
   box-shadow: 0px 4px 12px 0px rgb(0 0 0 / 25%);
+}
+.shadow-bottom {
+  box-shadow: 0px 10px 8px 0px rgb(0 0 0 / 60%);
 }
 text-black {
   color: black !important;

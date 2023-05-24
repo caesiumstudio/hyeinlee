@@ -8,14 +8,14 @@
             :src="photo"
             class="img-thumbnail shadow-strong"
           />
-          <p class="text-muted small">© Marcus Reichmann</p>
+          <p class="small">© Marcus Reichmann</p>
         </div>
         <div
           id="intro"
           class="col-md-8 d-flex flex-column align-items-start justify-content-between"
         >
           <p
-            class="text-justify text-black"
+            class="text-justify text-black first-letter"
             v-for="line in this.intro"
             :key="line.p"
             v-html="line.p"
@@ -52,3 +52,9 @@ export default {
   }
 }
 </script>
+<style scoped>
+p.first-letter::first-letter {
+  font-size: 140%;
+  font-weight: 600;
+}
+</style>

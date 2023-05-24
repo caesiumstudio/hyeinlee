@@ -80,7 +80,7 @@ export default {
 
 <style scoped>
 ul li a {
-  color: #026479 !important;
+  color: #013945 !important;
   font-weight: 400;
 }
 .navbar {

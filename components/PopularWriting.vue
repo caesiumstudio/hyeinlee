@@ -23,10 +23,12 @@
           <div class="mb-5">
             <div class="container py-5">
               <div class="row">
-                <div class="col-md-4 text-center">
-                  <img :src="pub.cover" class="item-img shadow-strong" />
+                <div
+                  class="col-md-4 text-center bg-lightgray d-flex justify-content-center align-items-center flex-column py-3"
+                >
+                  <img :src="pub.cover" class="item-img shadow-bottom" />
                 </div>
-                <div class="col-md-8 text-center">
+                <div class="col-md-8 text-center mt-3 mt-md-0">
                   <div class="img-wrapper">
                     <img
                       :src="pub.pdf"

@@ -5,8 +5,8 @@ export const state = () => ({
     }, { p: 'She is trained in curriculum design through her four years of education at Seoul National University of Education (B. Ed.), and East Asian thought from her MA from the Academy of Korean Studies. She is a PhD candidate at Freie Universität Berlin, and a visiting research fellow at Seoul National University till the end of 2023. She has worked for non-profit organizations such as Sakyadhita International Association and has written several articles on Buddhism in the West for Buddhist media.' }],
     contactMe: {
         heading: 'Contact Hyein Lee',
-        p: ['For publications - to write, review, or edit your next project.',
-            'For academic inquiry - to review and comment on your research proposal for scholarship and funding.'
+        p: ['<b>For publications -</b> to write, review, or edit your next project.',
+            '<b>For academic inquiry -</b> to review and comment on your research proposal for scholarship and funding.'
         ]
     }
 

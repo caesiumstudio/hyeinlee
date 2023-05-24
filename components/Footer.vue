@@ -6,7 +6,7 @@
       <div class="row">
         <div class="col-12 col-md text-center">
           <div class="mb-2">
-            <small class="ml-1 teal">© 2023 by Hyein Lee</small>
+            <strong><small class="ml-1 teal">© 2023 by Hyein Lee</small></strong>
           </div>
           <!-- <ul class="list-unstyled text-small">
             <li>

@@ -2,21 +2,21 @@
   <div class="mb-5 shadow-inner">
     <div class="container py-5">
       <div :id="item.id" class="row">
-        <div id="hl-cover" class="col-md-4 text-center">
-          <img :src="item.cover" class="item-img shadow-strong" />
+        <div id="hl-cover" class="col-md-4 text-center bg-lightgray py-4">
+          <img :src="item.cover" class="item-img shadow-bottom" />
           <div class="small mt-4">
             <a href="https://doi.org/10.1080/14639947.2021.2089426"
               >https://doi.org/10.1080/14639947.2021.2089426</a
             >
           </div>
         </div>
-        <div id="hl-center" class="col-md-8 text-left">
-          <div class="h4">"{{ item.title }}"</div>
-          <div class="text-center w-100 py-3">
+        <div id="hl-center" class="col-md-8 text-left px-5">
+          <div class="h4 pt-4 pt-md-0">"{{ item.title }}"</div>
+          <div class="text-center w-100 py-4">
             <i>Contemporary Buddhism</i>, 22:1-2 (2021): 380-397
           </div>
           <hr class="hr hr-blurry" />
-          <div class="line text-black" v-html="item.text"></div>
+          <div class="line text-black text-justify" v-html="item.text"></div>
         </div>
       </div>
     </div>

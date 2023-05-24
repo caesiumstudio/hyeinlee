@@ -2,13 +2,13 @@
   <div class="mb-5">
     <div class="container py-5">
       <div class="row">
-        <div class="col-md-6 text-center">
-          <img :src="item.cover" class="img-fluid shadow-strong item-img" />
+        <div class="col-md-6 text-center bg-lightgray py-4">
+          <img :src="item.cover" class="img-fluid shadow-bottom cover-img" />
         </div>
-        <div class="col-md-6 text-center">
+        <div class="col-md-6 mt-4 mt-md-0 text-center">
           <div class="img-wrapper">
             <a :href="'/academic-work/#' + item.id">
-              <img :src="item.pdf" class="img-fluid shadow-strong" />
+              <img :src="item.pdf" class="img-fluid shadow-bottom" />
             </a>
           </div>
         </div>
@@ -31,7 +31,7 @@ export default {
   height: 500px;
   overflow: hidden;
 }
-.item-img {
-  height: 500px;
+.cover-img {
+  height: 450px;
 }
 </style>

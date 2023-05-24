@@ -10,15 +10,14 @@
           />
 
           <div class="py-3">
-            <div class="h3">{{ contactMe.heading }}</div>
+            <div class="h1 teal">{{ contactMe.heading }}</div>
             <hr class="hr hr-blurry w-100 text-black" />
             <p
               class="contact-text pl-1 pt-4 text-black"
               v-for="p in contactMe.p"
               :key="p"
-            >
-              {{ p }}
-            </p>
+              v-html="p"
+            ></p>
           </div>
           <a class="btn bgcolor-white" href="mailto:contact@hyeinlee.com">
             <span class=""><i class="far fa-envelope"></i></span>
@@ -44,14 +43,14 @@
                     class="text-container d-flex flex-column align-items-start justify-content-between"
                   >
                     <div>
-                      <div class="h3">{{ contactMe.heading }}</div>
+                      <div class="h3 teal">{{ contactMe.heading }}</div>
                       <hr class="hr hr-blurry w-100 text-black" />
                       <div
                         class="contact-text pl-1 text-black"
                         v-for="p in contactMe.p"
                         :key="p"
                       >
-                        {{ p }}
+                        <span class="teal" v-html="p"></span>
                       </div>
                     </div>
                     <a
@@ -65,7 +64,9 @@
                 </td>
               </tr>
               <tr>
-                <td><p class="text-muted small">© Marcus Reichmann</p></td>
+                <td>
+                  <p class="small text-gray">© Marcus Reichmann</p>
+                </td>
                 <td></td>
               </tr>
             </tbody>
