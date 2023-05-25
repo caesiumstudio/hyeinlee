@@ -1,39 +1,42 @@
 <template>
   <div class="">
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">{{ fileName }}</h5>
+            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <PdfViewer :filePath="filePath" />
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div> -->
+        </div>
+      </div>
+    </div>
+
     <hr class="hr hr-blurry" />
     <div v-for="item in this.items" :key="item.cover">
       <div class="container">
         <div class="h2 mt-5 text-left">{{ item.category }}</div>
       </div>
       <div class="container">
-        <!-- card view -->
-        <div v-show="isCardView" class="row row-cols-1 row-cols-md-2 g-4">
-          <div v-for="pub in item.publications" :key="pub.cover">
-            <div class="col">
-              <Card id="hl-card" :item="pub" />
-            </div>
-          </div>
-        </div>
         <!-- academic view -->
-        <div
-          v-show="!isCardView"
-          v-for="pub in item.publications"
-          :key="pub.cover"
-        >
+        <div v-for="pub in item.publications" :key="pub.cover">
           <div class="mb-5">
             <div class="container py-5">
               <div class="row">
                 <div
-                  class="col-md-4 text-center bg-lightgray d-flex justify-content-center align-items-center flex-column py-3"
-                >
+                  class="col-md-4 text-center bg-lightgray d-flex justify-content-center align-items-center flex-column py-3">
                   <img :src="pub.cover" class="item-img shadow-bottom" />
                 </div>
-                <div class="col-md-8 text-center mt-3 mt-md-0">
-                  <div class="img-wrapper">
-                    <img
-                      :src="pub.pdf"
-                      class="img-fluid px-md-5 shadow-strong"
-                    />
+                <div class="col-md-8 text-center">
+                  <div class="img-wrapper mx-lg-2 my-5 my-md-0 px-lg-2 mx-xl-5 px-xl-5">
+                    <img :src="pub.pdfPreview" @click="showPdf(pub.filePath)" class="img-fluid px-md-5 shadow-strong" />
                   </div>
                 </div>
               </div>
@@ -56,10 +59,21 @@ export default {
     return {
       isCardView: false,
       items: [],
+      filePath: '/pdf-files/file.pdf',
+      fileName: ''
     };
   },
   created() {
     this._data.items = this.$store.state.popularWritings.items;
+  },
+  methods: {
+    showPdf: function (filePath) {
+      // `this` inside methods point to the Vue instance
+      this.filePath = filePath;
+      const myModal = new mdb.Modal(document.getElementById('exampleModal'), { filePath: filePath, fileName: '' });
+      myModal.show();
+
+    }
   },
   mounted() {
     const scrollReveal = window.ScrollReveal();
@@ -81,5 +95,11 @@ export default {
 }
 .item-img {
   width: 50%;
+}
+@media (min-width: 768px) and (max-width: 960px) {
+  .img-wrapper {
+    height: 100%;
+  }
+
 }
 </style>

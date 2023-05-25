@@ -82,6 +82,9 @@ html {
 .bg-lightgray {
   background-color: #f3f3f3;
 }
+.bg-darkgray {
+  background-color: #70c5b9;
+}
 .light-teal {
   background-color: #70c5b9;
   /* background-color: #cae1db; */
