@@ -81,7 +81,7 @@ export default {
 <style scoped>
 ul li a {
   color: #013945 !important;
-  font-weight: 400;
+  font-weight: 600;
 }
 .navbar {
   box-shadow: none;

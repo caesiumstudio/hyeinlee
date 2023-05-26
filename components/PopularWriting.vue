@@ -1,12 +1,11 @@
 <template>
   <div class="">
-
-    <PdfViewer ref="pdfViewer"/>
-
+    <!-- pdf viewer -->
+    <PdfViewer ref="pdfViewer" />
     <hr class="hr hr-blurry" />
     <div v-for="item in this.items" :key="item.cover">
       <div class="container">
-        <div class="h2 mt-5 text-left">{{ item.category }}</div>
+        <div class="category h2 mt-5 text-left teal">{{ item.category }}</div>
       </div>
       <div class="container">
         <!-- academic view -->
@@ -20,7 +19,8 @@
                 </div>
                 <div class="col-md-8 text-center">
                   <div class="img-wrapper mx-lg-2 my-5 my-md-0 px-lg-2 mx-xl-5 px-xl-5">
-                    <img :src="pub.pdfPreview" @click="showPdf(pub.filePath)" class="img-fluid px-md-5 shadow-strong" />
+                    <img :src="pub.pdfPreview" @click="showPdf(pub.filePath)"
+                      class="pdf-preview img-fluid px-md-5 shadow-strong" />
                   </div>
                 </div>
               </div>
@@ -63,13 +63,15 @@ export default {
 
     const scrollReveal = window.ScrollReveal();
     // scrollReveal.reveal("#intro");
-    scrollReveal.reveal("#hl-card", { scale: 0.8 });
+    scrollReveal.reveal(".item-img", { scale: 0.8, rotate: { x: 0, y: 0, z: -20 } });
+    scrollReveal.reveal(".pdf-preview", { scale: 0.8 });
+    scrollReveal.reveal(".category", { scale: 0.8 });
+
     // scrollReveal.reveal(".frontcover", {
     //   rotate: { x: 0, y: 50, z: 0 },
     //   duration: 1000
     // });
-    // scrollReveal.reveal('#hl-card', { scale: 0.99 });
-    // scrollReveal.reveal('#hl-card', { rotate: { x: 0, y: 0, z: 4 } });
+    
   }
 }
 </script>
