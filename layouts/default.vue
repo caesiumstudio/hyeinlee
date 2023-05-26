@@ -86,8 +86,7 @@ html {
   background-color: #70c5b9;
 }
 .light-teal {
-  background-color: #70c5b9;
-  /* background-color: #cae1db; */
+  background-color: #b1d2ca;
 }
 .light-pink {
   background-color: #f9f2e5;
