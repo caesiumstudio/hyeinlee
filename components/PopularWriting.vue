@@ -1,23 +1,7 @@
 <template>
   <div class="">
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">{{ fileName }}</h5>
-            <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-            <PdfViewer :filePath="filePath" />
-          </div>
-          <!-- <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div> -->
-        </div>
-      </div>
-    </div>
+
+    <PdfViewer ref="pdfViewer"/>
 
     <hr class="hr hr-blurry" />
     <div v-for="item in this.items" :key="item.cover">
@@ -50,17 +34,19 @@
 </template>
 
 <script>
+import PdfViewer from './PdfViewer.vue';
 import Publication from './Publication.vue';
 
 export default {
   name: 'NuxtTutorial',
-  components: { Publication },
+  components: { Publication, PdfViewer },
   data: () => {
     return {
       isCardView: false,
       items: [],
-      filePath: '/pdf-files/file.pdf',
-      fileName: ''
+      filePath: '',
+      fileName: '',
+      showModal: false
     };
   },
   created() {
@@ -68,14 +54,13 @@ export default {
   },
   methods: {
     showPdf: function (filePath) {
-      // `this` inside methods point to the Vue instance
       this.filePath = filePath;
-      const myModal = new mdb.Modal(document.getElementById('exampleModal'), { filePath: filePath, fileName: '' });
-      myModal.show();
-
-    }
+      this.$refs.pdfViewer.show(filePath)
+      this.showModal = true;
+    },
   },
   mounted() {
+
     const scrollReveal = window.ScrollReveal();
     // scrollReveal.reveal("#intro");
     scrollReveal.reveal("#hl-card", { scale: 0.8 });
@@ -93,9 +78,11 @@ export default {
   height: 500px;
   overflow: hidden;
 }
+
 .item-img {
   width: 50%;
 }
+
 @media (min-width: 768px) and (max-width: 960px) {
   .img-wrapper {
     height: 100%;
