@@ -55,7 +55,7 @@
                     </div>
                     <a
                       class="btn bgcolor-white"
-                      href="mailto:contact@hyeinlee.com"
+                      href="mailto:contact@leehyein.com"
                     >
                       <span class=""><i class="far fa-envelope"></i></span>
                       <span class="">Send Email</span>

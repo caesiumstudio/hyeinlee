@@ -10,6 +10,7 @@
     "lint:prettier": "prettier --check .",
     "lint": "npm run lint:prettier",
     "lintfix": "prettier --write --list-different .",
+    "deploy": "node deploy",
     "gitdeploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "fbdeploy": "nuxt build && NODE_ENV=production && nuxt generate && firebase deploy --only hosting:deliver-the-post"
   },
@@ -25,6 +26,7 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "^8.5.0",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "ftp-deploy": "2.4.3"
   }
 }

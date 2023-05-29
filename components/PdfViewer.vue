@@ -66,11 +66,11 @@ export default {
 .pdf-container {
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 10000;
 }
 
 .top-bar {
   padding: 4px;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #eaeaea;
 }
 </style>

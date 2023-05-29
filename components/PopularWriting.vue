@@ -2,7 +2,7 @@
   <div class="">
     <!-- pdf viewer -->
     <PdfViewer ref="pdfViewer" />
-    <hr class="hr hr-blurry" />
+    <!-- <hr class="hr hr-blurry" /> -->
     <div v-for="item in this.items" :key="item.cover">
       <div class="container">
         <div class="category h2 mt-5 text-left teal">{{ item.category }}</div>

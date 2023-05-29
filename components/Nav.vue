@@ -32,10 +32,7 @@
               >
                 Publications
               </a>
-              <ul
-                class="dropdown-menu"
-                aria-labelledby="navbarDropdownMenuLink"
-              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="/academic-work">
                   Academic Work
                 </a>
@@ -61,7 +58,7 @@
           </ul>
         </div>
       </div>
-    </nav>
+  </nav>
 </template>
 
 <script>
@@ -83,7 +80,10 @@ ul li a {
   color: #013945 !important;
   font-weight: 600;
 }
+
 .navbar {
   box-shadow: none;
+  background-color: white;
+  border-bottom: 1px solid #eaeaea;
 }
 </style>
